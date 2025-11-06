@@ -20,8 +20,8 @@ function App() {
 
   return (
     <div className="App">
-      <div className="header">TODO LIST</div>
-      <div className="contetn">
+      <h1 className="header">TODO LIST</h1>
+      <div className="content">
         <form onSubmit={handleSubmit}>
           <input
             placeholder="Название задачи"
@@ -37,8 +37,9 @@ function App() {
         <div className="tasks">
           {dataTask.map((d) => (
             <span key={d.id}>
-              {d.name}
+              {d.name} {""}
               <span>{d.id}</span>
+              {""}
               <input type="checkbox"></input>
             </span>
           ))}
