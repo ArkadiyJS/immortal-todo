@@ -1,18 +1,22 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { useEffect, useState } from "react";
+
 import "./App.css";
 
 function App() {
   const [valueInput, setValueInput] = useState("");
 
-  const dataTask = [
+  const [dataTask, setDataTask] = useState([
     { id: 12, name: "сходить в магазин", completed: false, data: "" },
-  ];
+  ]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const newTask = { id: 12, name: valueInput, completed: false, data: "" };
+    setDataTask([...dataTask, newTask]);
+    setValueInput("");
   };
+
+  useEffect(() => {}, []);
 
   return (
     <div className="App">
