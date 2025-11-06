@@ -29,6 +29,16 @@ function App() {
             добавить задачу
           </button>
         </form>
+
+        <div className="tasks">
+          {dataTask.map((d) => (
+            <div>
+              {d.name}
+              <div>{d.id}</div>
+              <input type="checkbox"></input>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
