@@ -4,9 +4,34 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [valueInput, setValueInput] = useState("");
 
-  return <div className="App"></div>;
+  const dataTask = [
+    { id: 12, name: "сходить в магазин", completed: false, data: "" },
+  ];
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
+  return (
+    <div className="App">
+      <div className="header">TODO LIST</div>
+      <div className="contetn">
+        <form onSubmit={handleSubmit}>
+          <input
+            placeholder="Название задачи"
+            type="text"
+            value={valueInput}
+            onChange={(e) => setValueInput(e.target.value)}
+          />
+          <button type="submit" disabled={valueInput === ""}>
+            добавить задачу
+          </button>
+        </form>
+      </div>
+    </div>
+  );
 }
 
 export default App;
