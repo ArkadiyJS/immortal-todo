@@ -32,11 +32,11 @@ function App() {
 
         <div className="tasks">
           {dataTask.map((d) => (
-            <div>
+            <span key={d.id}>
               {d.name}
-              <div>{d.id}</div>
+              <span>{d.id}</span>
               <input type="checkbox"></input>
-            </div>
+            </span>
           ))}
         </div>
       </div>
