@@ -8,7 +8,11 @@ function App() {
   const [dataTask, setDataTask] = useState([]);
 
   console.log(dataTask);
-
+  const removeWithDelay = (id) => {
+    setTimeout(() => {
+      setDataTask((dataTask) => dataTask.filter((item) => item.id !== id));
+    }, 3100);
+  };
   useEffect(() => {}, []);
 
   return (
@@ -18,6 +22,7 @@ function App() {
         <FormTodo dataTask={dataTask} setDataTask={setDataTask} />
         {dataTask.map((d) => (
           <Tasks
+            removeWithDelay={removeWithDelay}
             key={d.id}
             name={d.name}
             completed={d.completed}
