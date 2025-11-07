@@ -17,6 +17,7 @@ const FormTodo = ({ setDataTask, dataTask }) => {
     setDataTask([...dataTask, newTask]);
     setValueInput("");
   };
+
   return (
     <form className="formTodo" onSubmit={handleSubmit}>
       <input

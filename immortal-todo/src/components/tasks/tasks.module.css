@@ -4,7 +4,7 @@
   grid-template-areas: "check name data del";
   grid-template-columns: 22px 1fr 20% 20%;
   background-color: rgb(220, 96, 8);
-  margin-top: 5px;
+  margin-top: 18px;
   color: black;
   width: 100%;
   border-radius: 8px;
