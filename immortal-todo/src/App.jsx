@@ -19,7 +19,13 @@ function App() {
       <div className="content">
         <FormTodo dataTask={dataTask} setDataTask={setDataTask} />
         {dataTask.map((d) => (
-          <Tasks key={d.id} name={d.name} completed={d.completed} id={d.id} />
+          <Tasks
+            key={d.id}
+            name={d.name}
+            completed={d.completed}
+            id={d.id}
+            data={d.data}
+          />
         ))}
       </div>
     </div>

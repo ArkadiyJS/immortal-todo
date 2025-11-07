@@ -1,8 +1,8 @@
 .tasks {
   display: grid;
 
-  grid-template-areas: "check name del";
-  grid-template-columns: 22px 1fr 20%;
+  grid-template-areas: "check name data del";
+  grid-template-columns: 22px 1fr 20% 20%;
 
   color: black;
   width: 700px;
@@ -17,6 +17,9 @@
 }
 .btnDel {
   grid-area: del;
+}
+.data {
+  grid-area: data;
 }
 .nameTask {
   display: grid;
