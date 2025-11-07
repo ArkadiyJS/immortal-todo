@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 import "./App.css";
-import Tasks from "./tasks";
+import Tasks from "./components/tasks/tasks";
 import FormTodo from "./components/formTodo/formTodo";
 
 function App() {
