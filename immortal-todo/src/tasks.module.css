@@ -3,9 +3,11 @@
 
   grid-template-areas: "check name data del";
   grid-template-columns: 22px 1fr 20% 20%;
-
+  background-color: rgb(220, 96, 8);
+  margin-top: 5px;
   color: black;
   width: 700px;
+  border-radius: 8px;
 }
 .taskCheckbox {
   grid-area: check;
@@ -19,6 +21,8 @@
   grid-area: del;
 }
 .data {
+  justify-content: center;
+  align-self: center;
   grid-area: data;
 }
 .nameTask {

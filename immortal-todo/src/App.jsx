@@ -5,9 +5,7 @@ import Tasks from "./tasks";
 import FormTodo from "./components/formTodo/formTodo";
 
 function App() {
-  const [dataTask, setDataTask] = useState([
-    { id: 12, name: "сходить в магазин", completed: true, data: "" },
-  ]);
+  const [dataTask, setDataTask] = useState([]);
 
   console.log(dataTask);
 

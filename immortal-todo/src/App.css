@@ -7,7 +7,13 @@
 
 .formTodo {
   display: grid;
+
   grid-template-columns: 1fr 20%;
-  grid-template-rows: max-content;
-  width: 700px;
+
+  input {
+    height: 50px;
+  }
+  button {
+    height: 58px;
+  }
 }
