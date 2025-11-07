@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import nextId from "react-id-generator";
 
 import "./App.css";
 
@@ -11,10 +12,19 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const newTask = { id: 12, name: valueInput, completed: false, data: "" };
+
+    const generationID = nextId();
+    const newTask = {
+      id: generationID,
+      name: valueInput,
+      completed: false,
+      data: "",
+    };
     setDataTask([...dataTask, newTask]);
     setValueInput("");
   };
+
+  console.log(dataTask);
 
   useEffect(() => {}, []);
 
@@ -37,9 +47,8 @@ function App() {
         <div className="tasks">
           {dataTask.map((d) => (
             <span key={d.id}>
-              {d.name} {""}
+              {d.name}
               <span>{d.id}</span>
-              {""}
               <input type="checkbox"></input>
             </span>
           ))}
