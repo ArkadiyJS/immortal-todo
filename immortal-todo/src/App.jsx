@@ -35,7 +35,7 @@ function App() {
       <div className="content">
         <form className="formTodo" onSubmit={handleSubmit}>
           <input
-            maxlength="40"
+            maxLength="40"
             placeholder="Название задачи"
             type="text"
             value={valueInput}
