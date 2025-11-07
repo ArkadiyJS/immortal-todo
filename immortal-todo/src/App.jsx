@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import nextId from "react-id-generator";
 
 import "./App.css";
+import Tasks from "./tasks";
 
 function App() {
   const [valueInput, setValueInput] = useState("");
 
   const [dataTask, setDataTask] = useState([
-    { id: 12, name: "сходить в магазин", completed: false, data: "" },
+    { id: 12, name: "сходить в магазин", completed: true, data: "" },
   ]);
 
   const handleSubmit = (e) => {
@@ -32,8 +33,9 @@ function App() {
     <div className="App">
       <h1 className="header">TODO LIST</h1>
       <div className="content">
-        <form onSubmit={handleSubmit}>
+        <form className="formTodo" onSubmit={handleSubmit}>
           <input
+            maxlength="40"
             placeholder="Название задачи"
             type="text"
             value={valueInput}
@@ -44,13 +46,9 @@ function App() {
           </button>
         </form>
 
-        <div className="tasks">
+        <div>
           {dataTask.map((d) => (
-            <span key={d.id}>
-              {d.name}
-              <span>{d.id}</span>
-              <input type="checkbox"></input>
-            </span>
+            <Tasks key={d.id} name={d.name} completed={d.completed} id={d.id} />
           ))}
         </div>
       </div>
