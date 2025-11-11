@@ -4,6 +4,8 @@ import "./App.css";
 import Tasks from "./components/tasks/tasks";
 import FormTodo from "./components/formTodo/formTodo";
 
+// {id: 'id1', name: 'qweqw', completed: false, data: '12:29:19'}
+
 function App() {
   const [dataTask, setDataTask] = useState([]);
 
@@ -14,7 +16,15 @@ function App() {
     }, 3100);
   };
 
-  useEffect(() => {}, []);
+  const toggleTaskCompleted = (id) => {
+    setDataTask((prevState) =>
+      prevState.map((task) =>
+        task.id === id ? { ...task, completed: !task.completed } : task
+      )
+    );
+  };
+
+  useEffect(() => {}, [dataTask]);
 
   return (
     <div className="App">
@@ -23,6 +33,7 @@ function App() {
         <FormTodo dataTask={dataTask} setDataTask={setDataTask} />
         {dataTask.map((d) => (
           <Tasks
+            toggleTaskCompleted={toggleTaskCompleted}
             removeWithDelay={removeWithDelay}
             key={d.id}
             name={d.name}
