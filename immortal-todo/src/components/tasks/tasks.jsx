@@ -3,8 +3,6 @@ import s from "./tasks.module.css";
 import ButtonDeleteTask from "./buttonDeleteTask";
 import Checkbox from "./checkbox";
 
-// TODO реализовать функционал чек бокс выполнение таски
-
 const Tasks = ({
   name,
   id,
@@ -23,12 +21,6 @@ const Tasks = ({
     >
       <div className={s.nameTask}>{name}</div>
       <div className={s.data}>{data}</div>
-      {/* <input
-        checked={completed}
-        onChange={() => toggleTaskCompleted(id)}
-        className={s.taskCheckbox}
-        type="checkbox"
-      /> */}
 
       <Checkbox
         completed={completed}
