@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div className="App">
-      <div className="header">TODO LIST</div>
+      <h1 className="header">TODO LIST</h1>
       <div className="content">
         <FormTodo dataTask={dataTask} setDataTask={setDataTask} />
         {dataTask.map((d) => (

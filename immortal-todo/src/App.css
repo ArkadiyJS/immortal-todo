@@ -1,4 +1,6 @@
 .App {
+  display: grid;
+  place-items: center;
   margin: 0 auto;
 }
 @media (max-width: 600px) {
@@ -6,6 +8,10 @@
     font-size: 15px;
   }
   /* CSS для телефонов, в том числе больших моделей */
+}
+.content {
+  max-width: 700px;
+  width: 100%;
 }
 .header {
   display: grid;
@@ -23,4 +29,5 @@
   margin-top: 20px;
   height: 40px;
   width: 100%;
+  max-width: 700px;
 }

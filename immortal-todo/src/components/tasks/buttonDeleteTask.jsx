@@ -7,7 +7,7 @@ const ButtonDeleteTask = ({ removeWithDelay, id }) => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    setDeleteItemShow(!deleteItemShow);
+    setDeleteItemShow(false);
     setTimeout(() => setDeleteItemShow(true), 3200);
     removeWithDelay(id);
     if (!isDelete) {
