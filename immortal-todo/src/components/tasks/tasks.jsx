@@ -2,6 +2,8 @@ import React from "react";
 import s from "./tasks.module.css";
 import ButtonDeleteTask from "./buttonDeleteTask";
 
+// TODO реализовать функционал чек бокс выполнение таски
+
 const Tasks = ({ name, id, completed, data, removeWithDelay }) => {
   return (
     <div className={s.tasks}>

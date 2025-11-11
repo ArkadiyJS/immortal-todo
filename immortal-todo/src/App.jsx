@@ -13,6 +13,7 @@ function App() {
       setDataTask((dataTask) => dataTask.filter((item) => item.id !== id));
     }, 3100);
   };
+
   useEffect(() => {}, []);
 
   return (
