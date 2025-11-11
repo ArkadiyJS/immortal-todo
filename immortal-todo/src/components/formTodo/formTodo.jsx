@@ -8,12 +8,14 @@ const FormTodo = ({ setDataTask, dataTask }) => {
     e.preventDefault();
     const now = new Date();
     const generationID = nextId();
+
     const newTask = {
       id: generationID,
       name: valueInput,
       completed: false,
       data: `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`,
     };
+
     setDataTask([...dataTask, newTask]);
     setValueInput("");
   };
